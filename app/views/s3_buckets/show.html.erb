@@ -5,7 +5,7 @@
   <%= link_to "Upload", :action => 'upload', :id => @bucket.name %>
   <%= link_to "Delete Bucket" %>
 </div>
-
+<%= will_paginate(@files) %>
 <% if @files.blank? %>
   No files
 <% else  %>

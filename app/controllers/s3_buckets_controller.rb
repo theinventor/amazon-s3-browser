@@ -8,7 +8,7 @@ class S3BucketsController < ApplicationController
   def show
     @crumbs = [ 'Buckets', params[:id] ]
     @bucket = S3Bucket.find(params[:id])
-    @files = @bucket.objects
+    @files = @bucket.objects.paginate(:page => params[:page], :per_page => 20)
   end
   
   def upload
