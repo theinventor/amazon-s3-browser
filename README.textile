@@ -2,6 +2,8 @@ h2. Amazon S3 Browser
 
 h3. This rails application can be used to browse, add, delete and edit both buckets and objects in Amazon S3
 
+Also added basic pagination to help with load time for large buckets
+
 p. Install instructions:
 
 * 1. Edit the file: config/s3_config.yml
